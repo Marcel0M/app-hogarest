@@ -17,6 +17,7 @@ export class ListaMascotaPage implements OnInit {
   raza: any;
   color: any;
   temperamento: any;
+  tamano: any;
   foto_animal_rescatado: any;
   hogar_temporal_id_hogar: any;
   animal_id_animal: any;
@@ -40,6 +41,7 @@ export class ListaMascotaPage implements OnInit {
       raza: this.raza,
       color: this.color,
       temperamento: this.temperamento,
+      tamano: this.tamano,
       foto_animal_rescatado: this.foto_animal_rescatado,
       hogar_temporal_id_hogar: this.hogar_temporal_id_hogar,
       animal_id_animal: this.animal_id_animal,
@@ -53,6 +55,7 @@ export class ListaMascotaPage implements OnInit {
       this.raza = '';
       this.color = '';
       this.temperamento = '';
+      this.tamano = '';
       this.foto_animal_rescatado = '';
       this.hogar_temporal_id_hogar = '';
       this.animal_id_animal = '';

@@ -8,27 +8,31 @@
 <ion-content class="ion-padding tema">
   
   <ion-item class="ion-padding tema">
-    <ion-label class="letra-input" position="floating">Tipo De Mascota</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-label class="letra-input" position="floating">Tipo De Animal</ion-label>
+    <ion-input [(ngModel)]="tipo_animal" type="text"></ion-input>
   </ion-item>
   <ion-item class="ion-padding tema">
     <ion-label class="letra-input" position="floating">Sexo</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input [(ngModel)]="sexo" type="text"></ion-input>
   </ion-item>
   <ion-item class="ion-padding tema">
     <ion-label class="letra-input" position="floating">Raza</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input [(ngModel)]="raza" type="text"></ion-input>
   </ion-item>
   <ion-item class="ion-padding tema">
     <ion-label class="letra-input" position="floating">Color</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input [(ngModel)]="color" type="text"></ion-input>
   </ion-item>
   <ion-item class="ion-padding tema">
     <ion-label class="letra-input" position="floating">Temperamento</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input [(ngModel)]="temperamento" type="text"></ion-input>
+  </ion-item>
+  <ion-item class="ion-padding tema">
+    <ion-label class="letra-input" position="floating">Tamano</ion-label>
+    <ion-input [(ngModel)]="tamano" type="text"></ion-input>
   </ion-item>
 
-  <ion-button color="warning" class="ion-margin letra-boton" expand="block">Registrar Mascota</ion-button>
+  <ion-button (click)="addMascota()" color="warning" class="ion-margin letra-boton" expand="block">Registrar Mascota</ion-button>
 
   
   
