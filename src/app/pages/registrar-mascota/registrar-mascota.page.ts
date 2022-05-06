@@ -27,6 +27,7 @@ export class RegistrarMascotaPage implements OnInit {
   ngOnInit() {
   }
 
+  //FUNCION QUE AGREGA UNA NUEVA MASCOTA
   addMascota(){
 
     let data = {
@@ -43,7 +44,7 @@ export class RegistrarMascotaPage implements OnInit {
     }
 
     this._apiService.addMascota(data).subscribe((res:any) => {
-      console.log("SUCCESS ===",res);
+      console.log("-------MASCOTA RESGISTRADA",res);
       //this.id_mascota_rescatada = '';
       this.tipo_animal = '';
       this.sexo = '';

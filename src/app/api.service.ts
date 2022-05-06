@@ -24,4 +24,9 @@ export class ApiService {
    getMascotas() {
     return this.http.get('http://localhost/proyectos/backend/getMascotas.php');
    }
+   
+   
+   deleteMascota(id_mascota_rescatada) {
+    return this.http.get('http://localhost/proyectos/backend/delete.php'+ id_mascota_rescatada);
+   }
 }

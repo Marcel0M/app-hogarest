@@ -11,7 +11,7 @@ import { ApiService } from 'src/app/api.service';
 })
 export class ListaMascotaPage implements OnInit {
 
-  //id_mascota_rescatada: any;
+  id_mascota_rescatada: any;
   tipo_animal: any;
   sexo: any;
   raza: any;
@@ -35,7 +35,7 @@ export class ListaMascotaPage implements OnInit {
 
   addMascota(){
     let data = {
-      //id_mascota_rescatada: this.id_mascota_rescatada,
+      id_mascota_rescatada: this.id_mascota_rescatada,
       tipo_animal: this.tipo_animal,
       sexo: this.sexo,
       raza: this.raza,
@@ -49,7 +49,7 @@ export class ListaMascotaPage implements OnInit {
 
     this._apiService.addMascota(data).subscribe((res:any) => {
       console.log("SUCCESS ===",res);
-      //this.id_mascota_rescatada = '';
+      this.id_mascota_rescatada = '';
       this.tipo_animal = '';
       this.sexo = '';
       this.raza = '';
@@ -69,6 +69,7 @@ export class ListaMascotaPage implements OnInit {
   }
 
 
+  //FUNCION QUE LISTA LAS MASCOTAS
   getMascotas(){
     this._apiService.getMascotas().subscribe((res:any) => {
       console.log("SUCCESS ===",res);
@@ -77,6 +78,18 @@ export class ListaMascotaPage implements OnInit {
       console.log("ERROR ===",error);
     })
     
+  }
+
+
+  //FUNCION QUE ELIMINA UNA MASCOTA
+  deleteMascota(id_mascota_rescatada){
+    this._apiService.deleteMascota(id_mascota_rescatada).subscribe((res:any) => {
+      console.log("BORRADO");
+      this.getMascotas();
+    },(err:any) => {
+      console.log("ERROR")
+    })
+
   }
 
 }
