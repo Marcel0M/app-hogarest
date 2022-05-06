@@ -10,22 +10,22 @@
   
   <ion-item class="ion-padding tema">
     <ion-label class="letra-input" position="floating">Nombre Usuario</ion-label>
-    <ion-input type="email"></ion-input>
+    <ion-input type="email" [(ngModel)]="nombre"></ion-input>
   </ion-item>
   <ion-item class="ion-padding tema">
     <ion-label class="letra-input" position="floating">E-mail</ion-label>
-    <ion-input></ion-input>
+    <ion-input [(ngModel)]="email"></ion-input>
   </ion-item>
   <ion-item class="ion-padding tema">
     <ion-label class="letra-input" position="floating">Teléfono</ion-label>
-    <ion-input type="number"></ion-input>
+    <ion-input type="number" [(ngModel)]="telefono"></ion-input>
   </ion-item>
   <ion-item class="ion-padding tema">
     <ion-label class="letra-input" position="floating">Contraseña</ion-label>
-    <ion-input type="password"></ion-input>
+    <ion-input type="password" [(ngModel)]="contrasena"></ion-input>
   </ion-item>
 
-  <ion-button color="warning" class="ion-margin letra-boton" expand="block">Registrar</ion-button>
+  <ion-button color="warning" class="ion-margin letra-boton" expand="block" (click)="tryRegister()">Registrar</ion-button>
 
   
   
