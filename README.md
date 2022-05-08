@@ -1,15 +1,3 @@
-# app-hogarest
-APP PARA RESCATE Y ADOPCION DE MASCOTAS
-
------------- EJECUTAR EN ORDEN --------------------
-OJO OJO OJO en la terminal cd  carpteta donde se encuentra el proyecto y ejecutas.
-
-INSTALADOR STORAGE:
-1.- npm install --save @ionic/storage 
-2.- npm i rxjs-compat           
-3.- npm install @ionic/storage-angular  
-
-
 
 # LibreAdopcion APP
 Aplicación para la libre adopcion de animales.
