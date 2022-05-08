@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+/* import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -18,3 +18,4 @@ import { ListaMascotaPage } from './lista-mascota.page';
   declarations: [ListaMascotaPage]
 })
 export class ListaMascotaPageModule {}
+ */

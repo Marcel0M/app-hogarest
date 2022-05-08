@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+/* import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/api.service';
+
 
 
 @Component({
@@ -64,3 +65,4 @@ export class RegistrarMascotaPage implements OnInit {
   }
 
 }
+ */

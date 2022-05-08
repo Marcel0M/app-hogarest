@@ -18,7 +18,8 @@ export class LoginPage implements OnInit {
   }
 
   registrate() {
-    this.navController.navigateRoot('registrar')
+    this.router.navigate(['/registrar']);
+    //this.navController.navigateRoot('registrar')
 
   }
 

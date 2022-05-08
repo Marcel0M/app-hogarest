@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+/* import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
 import { RegistrarMascotaPage } from './registrar-mascota.page';
@@ -22,3 +22,4 @@ describe('RegistrarMascotaPage', () => {
     expect(component).toBeTruthy();
   });
 });
+ */

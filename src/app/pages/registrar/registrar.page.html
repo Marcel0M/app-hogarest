@@ -25,7 +25,7 @@
     <ion-input type="password" [(ngModel)]="contrasena"></ion-input>
   </ion-item>
 
-  <ion-button color="warning" class="ion-margin letra-boton" expand="block" (click)="tryRegister()">Registrar</ion-button>
+  <ion-button color="warning" class="ion-margin letra-boton" expand="block" (click)="tryRegister()" [disabled]="disabledButton">Registrar</ion-button>
 
   
   
