@@ -62,7 +62,7 @@ ngOnInit() {
           nombre: this.nombre,
           contrasena: this.contrasena
         }
-         this.accsPrvds.postData(body, 'proses_api.php').subscribe((res:any)=>{
+         this.accsPrvds.postData(body, 'proses_api.php').subscribe((res: any)=>{
           if(res.success==true){
             loader.dismiss();
             this.disabledButton = false;
