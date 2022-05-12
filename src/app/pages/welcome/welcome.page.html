@@ -1,6 +1,7 @@
 
 <ion-content class="tema">
   
+  
   <ion-slides pager="true">
 
     <ion-slide *ngFor="let slide of slides" text-center>
@@ -9,7 +10,7 @@
         <img [src]="slide.img">
       </div>
       <div>
-        <h3 [innerHTML]="slide.titulo"></h3>
+        <h3 [innerHTML]="slide.titulo" ></h3>
       </div>
       
     </ion-slide>

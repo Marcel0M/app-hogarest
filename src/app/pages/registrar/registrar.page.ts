@@ -22,11 +22,26 @@ export class RegistrarPage implements OnInit {
     private toastCtrl: ToastController,
     private loadingCtrl: LoadingController,
     private alertCtrl: AlertController,
-    private accsPrvds: AccessProviders,
+    private accsPrvds: AccessProviders
     ) { }
 
 ngOnInit() {
+  this.presentLoading(); 
+  }
 
+  //FUNCION QUE CARGA PAGINA
+  async presentLoading() {
+    const loading = await this.loadingCtrl.create({
+      cssClass: 'my-custom-class',
+      message: 'Cargando...',
+      duration: 1000,
+      translucent: true,
+      spinner: "bubbles"
+    });
+    await loading.present();
+
+    const { role, data } = await loading.onDidDismiss();
+    console.log('Loading dismissed!');
   }
 
   ionViewDidEnter(){

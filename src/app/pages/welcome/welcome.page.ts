@@ -8,11 +8,11 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./welcome.page.scss'],
 })
 export class WelcomePage implements OnInit {
-//FUNCION PARA SLIDE WELCOMEPAGE
+//SLIDE WELCOME PAGE
   slides = [
     {
       img: 'assets/img/mascota.png',
-      titulo: 'Ayuda!<br>rescatando de las calles<br>Una mascota abandonada'
+      titulo: 'Ayuda!<br>Rescatando de las calles<br>Una mascota abandonada'
     },
     {
       img: 'assets/img/house.png',

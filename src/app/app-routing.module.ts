@@ -31,14 +31,19 @@ const routes: Routes = [
     path: 'perfil',
     loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
   },
- /*  {
+  {
     path: 'lista-mascota',
     loadChildren: () => import('./pages/lista-mascota/lista-mascota.module').then( m => m.ListaMascotaPageModule)
   },
   {
     path: 'registrar-mascota',
     loadChildren: () => import('./pages/registrar-mascota/registrar-mascota.module').then( m => m.RegistrarMascotaPageModule)
-  }, */
+  },
+  {
+    path: 'modi-mascota/:id_mascota_rescatada',
+    loadChildren: () => import('./pages/modi-mascota/modi-mascota.module').then( m => m.ModiMascotaPageModule)
+  },
+
 
 ];
 

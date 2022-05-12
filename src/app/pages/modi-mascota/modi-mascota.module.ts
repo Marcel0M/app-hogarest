@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ListaMascotaPageRoutingModule } from './lista-mascota-routing.module';
+import { ModiMascotaPageRoutingModule } from './modi-mascota-routing.module';
 
-import { ListaMascotaPage } from './lista-mascota.page';
+import { ModiMascotaPage } from './modi-mascota.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ListaMascotaPageRoutingModule
+    ModiMascotaPageRoutingModule
   ],
-  declarations: [ListaMascotaPage]
+  declarations: [ModiMascotaPage]
 })
-export class ListaMascotaPageModule {}
+export class ModiMascotaPageModule {}

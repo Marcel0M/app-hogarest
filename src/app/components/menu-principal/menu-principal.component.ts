@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 
 @Component({
@@ -8,7 +8,9 @@ import { NavController } from '@ionic/angular';
 })
 export class MenuPrincipalComponent implements OnInit {
 
-  constructor(public navController: NavController) { }
+  @Input() titulo: string = '';//TITULO PAGINAS
+
+  constructor(public navController: NavController,) { }
 
   ngOnInit() {
 
@@ -24,6 +26,7 @@ export class MenuPrincipalComponent implements OnInit {
     this.navController.navigateRoot('inicio')
 
   }
+  
 
 
 }

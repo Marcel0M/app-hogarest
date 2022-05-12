@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Camera, CameraResultType } from '@capacitor/camera';
-import { AlertController } from '@ionic/angular';
+import { AlertController, LoadingController } from '@ionic/angular';
 import { NavController } from '@ionic/angular';
 
 @Component({
@@ -13,14 +13,31 @@ export class InicioPage implements OnInit {
   ruta: string = '';
 
   constructor( private alertController: AlertController,
-               public navController: NavController) { }
+               public navController: NavController,
+               public loadingController: LoadingController) { }
 
   ngOnInit() {
+    this.presentLoading();
   }
+
+  //FUNCION QUE CARGA PAGINA
+  async presentLoading() {
+    const loading = await this.loadingController.create({
+      cssClass: 'my-custom-class',
+      message: 'Cargando...',
+      duration: 1500,
+      translucent: true,
+      spinner: "bubbles"
+    });
+    await loading.present();
+
+    const { role, data } = await loading.onDidDismiss();
+    console.log('Loading dismissed!');
+  }
+
 //FUNCION QUE TE LLEVA AL PERFIL
   perfil() {
     this.navController.navigateRoot('perfil')
-
   }
 
   //FUNCION PARA MOSTRAR FICHA

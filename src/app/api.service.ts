@@ -1,4 +1,4 @@
-/* import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
@@ -27,7 +27,16 @@ export class ApiService {
    
    
    deleteMascota(id_mascota_rescatada) {
-    return this.http.get('http://localhost/proyectos/backend/delete.php'+ id_mascota_rescatada);
+    return this.http.delete('http://localhost/proyectos/backend/delete.php?id_mascota_rescatada='+ id_mascota_rescatada);
+   }
+
+
+   getMascota(id_mascota_rescatada) {
+    return this.http.delete('http://localhost/proyectos/backend/getSingleMascota.php?id_mascota_rescatada='+ id_mascota_rescatada);
+   }
+
+
+   updateMascota(id_mascota_rescatada, data) {
+    return this.http.put('http://localhost/proyectos/backend/updateMascota.php?id_mascota_rescatada='+ id_mascota_rescatada,data);
    }
 }
- */

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
-import { Storage } from '@ionic/storage'; //@ionic/storage
+//import { Storage } from '@ionic/storage'; //@ionic/storage
 import { NavController } from '@ionic/angular'
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx'
@@ -15,15 +15,15 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private storage: Storage,
+    //private storage: Storage,
     public navCtrl: NavController
     ) { 
       this.initializeApp();
   } 
 
-  //async ngOnInit() {
-  //  await this.storage.create();
-  //}
+  /* async ngOnInit() {
+    await this.storage.create();
+  } */
 
   initializeApp() {
     this.platform.ready().then( () => {

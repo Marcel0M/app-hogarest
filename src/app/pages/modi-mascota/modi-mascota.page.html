@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Modificar Mascota</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="full">
+
+    <ion-item class="ion-padding tema">
+      <ion-label class="letra-input" position="floating">Tipo De Animal</ion-label>
+      <ion-input [(ngModel)]="tipo_animal" type="text"></ion-input>
+    </ion-item>
+    <ion-item class="ion-padding tema">
+      <ion-label class="letra-input" position="floating">Sexo</ion-label>
+      <ion-input [(ngModel)]="sexo" type="text"></ion-input>
+    </ion-item>
+    <ion-item class="ion-padding tema">
+      <ion-label class="letra-input" position="floating">Raza</ion-label>
+      <ion-input [(ngModel)]="raza" type="text"></ion-input>
+    </ion-item>
+    <ion-item class="ion-padding tema">
+      <ion-label class="letra-input" position="floating">Color</ion-label>
+      <ion-input [(ngModel)]="color" type="text"></ion-input>
+    </ion-item>
+    <ion-item class="ion-padding tema">
+      <ion-label class="letra-input" position="floating">Temperamento</ion-label>
+      <ion-input [(ngModel)]="temperamento" type="text"></ion-input>
+    </ion-item>
+    <ion-item class="ion-padding tema">
+      <ion-label class="letra-input" position="floating">Tamano</ion-label>
+      <ion-input [(ngModel)]="tamano" type="text"></ion-input>
+    </ion-item>
+  
+    <ion-button (click)="updateMascota()" color="warning" class="ion-margin letra-boton" expand="block">Guardar Cambios</ion-button>
+
+  </ion-list>
+
+</ion-content>

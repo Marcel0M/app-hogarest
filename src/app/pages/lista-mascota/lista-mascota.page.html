@@ -1,4 +1,4 @@
-<!-- <ion-header class="ion-no-border">
+<ion-header class="ion-no-border">
   <ion-toolbar class="tema">
     <ion-back-button slot="start" defaultHref="perfil" mode="ios" color="dark" text="Atras"></ion-back-button>
     <ion-title>Lista Mascotas</ion-title>
@@ -13,34 +13,26 @@
     </ion-list-header>
   </ion-list>
 
-  <ion-item class="tema" lines="inset" *ngFor="let mascota_rescatada of mascota_rescatadas"> -->
-    
-    <!-- ESTO ESTA MARCADO DE SIEMPORE-->
-    <!--<ion-label>
-      <h5>{{mascota_rescatada.tipo_animal}} Caracteristicas: ({{mascota_rescatada.sexo}}, {{mascota_rescatada.raza}})</h5>
-    </ion-label>-->
- <!-- FIN ESTA MARCADO DE SIEMPORE-->
-
-
-
-<!--     <ion-card >
+  <ion-item class="tema" lines="inset" *ngFor="let mascota_rescatada of mascota_rescatadas">
+     <ion-card >
       <img src="./assets/img/gato.jpg" />
       <ion-card-header>
         <ion-card-title>{{mascota_rescatada.tipo_animal}}</ion-card-title>
         <ion-card-subtitle class="ion-padding-top">Caracteristicas</ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
-        {{mascota_rescatada.sexo}},
-        {{mascota_rescatada.raza}},
-        {{mascota_rescatada.color}},
-        {{mascota_rescatada.temperamento}},
-        {{mascota_rescatada.tamano}}
+        <ion-label>Sexo: {{mascota_rescatada.sexo}}</ion-label>
+        <ion-label>Raza: {{mascota_rescatada.raza}}</ion-label>
+        <ion-label>Color: {{mascota_rescatada.color}}</ion-label>
+        <ion-label>Temperamento: {{mascota_rescatada.temperamento}}</ion-label>
+        <ion-label>Tamaño: {{mascota_rescatada.tamano}}</ion-label>
       </ion-card-content>
     </ion-card>
+
     <div class="item-note">
-      <ion-icon name="create" style="zoom: 2.0;"></ion-icon>
+      <ion-icon name="create" style="zoom: 2.0;" [routerLink]="['/modi-mascota/',mascota_rescatada.id_mascota_rescatada]"></ion-icon>
       <ion-icon name="trash" style="zoom: 2.0;" (click)="deleteMascota(mascota_rescatada.id_mascota_rescatada)" ></ion-icon>
     </div>
   </ion-item>
 
-</ion-content> -->
+</ion-content>

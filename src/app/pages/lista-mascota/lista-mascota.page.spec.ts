@@ -1,4 +1,4 @@
-/* import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
 import { ListaMascotaPage } from './lista-mascota.page';
@@ -22,4 +22,3 @@ describe('ListaMascotaPage', () => {
     expect(component).toBeTruthy();
   });
 });
- */

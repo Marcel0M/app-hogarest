@@ -1,4 +1,5 @@
-/* import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { LoadingController } from '@ionic/angular';
 import { ApiService } from 'src/app/api.service';
 
 
@@ -25,15 +26,31 @@ export class ListaMascotaPage implements OnInit {
   mascota_rescatadas: any = [];
 
   constructor(
-    public _apiService: ApiService
+    public _apiService: ApiService, public loadingController: LoadingController
     ) { 
     this.getMascotas();
   }
 
   ngOnInit() {
+    this.presentLoading();
   }
 
-  addMascota(){
+  //FUNCION QUE CARGA PAGINA
+  async presentLoading() {
+    const loading = await this.loadingController.create({
+      cssClass: 'my-custom-class',
+      message: 'Cargando...',
+      duration: 1500,
+      translucent: true,
+      spinner: "bubbles"
+    });
+    await loading.present();
+
+    const { role, data } = await loading.onDidDismiss();
+    console.log('Loading dismissed!');
+  }
+
+  /* addMascota(){
     let data = {
       id_mascota_rescatada: this.id_mascota_rescatada,
       tipo_animal: this.tipo_animal,
@@ -66,7 +83,7 @@ export class ListaMascotaPage implements OnInit {
       console.log("ERROR ===", error);
     })
 
-  }
+  } */
 
 
   //FUNCION QUE LISTA LAS MASCOTAS
@@ -93,4 +110,3 @@ export class ListaMascotaPage implements OnInit {
   }
 
 }
- */

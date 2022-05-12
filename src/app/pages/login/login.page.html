@@ -1,3 +1,4 @@
+
 <ion-content class="ion-padding tema">
 
   <ion-img src="assets/img/login.png"></ion-img>
@@ -5,25 +6,20 @@
   <ion-item class="ion-margin-top tema">
     <ion-icon name="person-outline" slot="start"></ion-icon>
     <ion-label position="floating">Usuario</ion-label> 
-    <ion-input [(ngModel)]="usuario"></ion-input> 
+    <ion-input [(ngModel)]="usuario"></ion-input>
   </ion-item>
-
 
   <ion-item class="ion-margin-top tema">
     <ion-icon name="key-outline" slot="start"></ion-icon>
     <ion-label position="floating">Contraseña</ion-label>
-    <ion-input type="password" [(ngModel)]="contrasena"></ion-input> 
+    <ion-input type="password" [(ngModel)]="contrasena"></ion-input>
   </ion-item>
 
   <ion-button [routerLink]="['/inicio']" color="warning" class="ion-margin letra-boton" expand="block" (click)="tryLogin()">Ingresar</ion-button>
 
   <button (click)="registrate()" class="cta ion-margin">
     <span class="hover-underline-animation"> Registrate </span>
-    <svg>
-      
-    </svg>
+    <svg></svg>
   </button>
-
-  
 
 </ion-content>
