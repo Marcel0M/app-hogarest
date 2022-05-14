@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoadingController } from '@ionic/angular';
 import { ApiService } from 'src/app/api.service';
+import { Camera, CameraResultType } from '@capacitor/camera';
 
 
 
@@ -10,6 +11,8 @@ import { ApiService } from 'src/app/api.service';
   styleUrls: ['./registrar-mascota.page.scss'],
 })
 export class RegistrarMascotaPage implements OnInit {
+
+  ruta: string = '';
 
   //id_mascota_rescatada: any;
   tipo_animal: any;
@@ -29,6 +32,7 @@ export class RegistrarMascotaPage implements OnInit {
 
   ngOnInit() {
     this.presentLoading();
+    this.tomarFoto();
   }
   //FUNCION QUE CARGA PAGINA
   async presentLoading() {
@@ -43,6 +47,17 @@ export class RegistrarMascotaPage implements OnInit {
 
     const { role, data } = await loading.onDidDismiss();
     console.log('Loading dismissed!');
+  }
+
+
+  async tomarFoto(){
+    const image = await Camera.getPhoto({
+      quality: 90,
+      //allowEditing: true,
+      resultType: CameraResultType.Uri
+    });
+  
+    this.ruta = image.webPath;
   }
   
 

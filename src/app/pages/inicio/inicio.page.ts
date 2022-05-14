@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Camera, CameraResultType } from '@capacitor/camera';
 import { AlertController, LoadingController } from '@ionic/angular';
 import { NavController } from '@ionic/angular';
@@ -13,6 +14,7 @@ export class InicioPage implements OnInit {
   ruta: string = '';
 
   constructor( private alertController: AlertController,
+               private router: Router,
                public navController: NavController,
                public loadingController: LoadingController) { }
 
@@ -26,7 +28,6 @@ export class InicioPage implements OnInit {
       cssClass: 'my-custom-class',
       message: 'Cargando...',
       duration: 1500,
-      translucent: true,
       spinner: "bubbles"
     });
     await loading.present();
@@ -35,13 +36,19 @@ export class InicioPage implements OnInit {
     console.log('Loading dismissed!');
   }
 
+
+  registraMascota() {
+    this.router.navigate(['/registrar-mascota']);
+    this.navController.navigateRoot('registrar-mascota')
+  }
+
 //FUNCION QUE TE LLEVA AL PERFIL
   perfil() {
     this.navController.navigateRoot('perfil')
   }
 
   //FUNCION PARA MOSTRAR FICHA
-  async presentFicha() {
+  /* async presentFicha() {
     const alert = await this.alertController.create({
       header: 'Registrar Mascota',
       inputs: [
@@ -114,7 +121,7 @@ export class InicioPage implements OnInit {
     });
 
     await alert.present();
-  }
+  } */
 
   //FUNCION PARA TOMAR UNA FOTO
   async tomarFoto(){

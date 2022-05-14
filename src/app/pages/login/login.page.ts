@@ -37,7 +37,6 @@ export class LoginPage implements OnInit {
   registrate() {
     this.router.navigate(['/registrar']);
     this.navController.navigateRoot('registrar')
-
   }
 
 }

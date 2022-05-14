@@ -39,13 +39,20 @@
 
 
   <ion-fab vertical="bottom" horizontal="start" edge slot="fixed">
-    <ion-fab-button color="warning">
-      <ion-icon name="star"></ion-icon>
+    <ion-fab-button color="tertiary">
+      <ion-icon name="location"></ion-icon>
     </ion-fab-button>
   </ion-fab>
 
 
   <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button (click)="registraMascota()" color="warning">
+      <ion-icon name="paw"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+
+  <!-- <ion-fab vertical="bottom" horizontal="center" slot="fixed">
     <ion-fab-button color="danger">
       <ion-icon name="paw"></ion-icon>
     </ion-fab-button>
@@ -58,7 +65,9 @@
     <ion-fab-list side="end">
       <ion-fab-button (click)="presentFicha()"><ion-icon name="document-text"></ion-icon></ion-fab-button>
     </ion-fab-list>
-  </ion-fab>
+  </ion-fab> -->
+
+
 </ion-content>
 
 
