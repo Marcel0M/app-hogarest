@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoadingController, NavController } from '@ionic/angular';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -25,7 +25,6 @@ export class LoginPage implements OnInit {
       cssClass: 'my-custom-class',
       message: 'Cargando...',
       duration: 1000,
-      translucent: true,
       spinner: "bubbles"
     });
     await loading.present();
@@ -34,6 +33,7 @@ export class LoginPage implements OnInit {
     console.log('Loading dismissed!');
   }
 
+  //FUNCIONES DE NAVEGACION
   registrate() {
     this.router.navigate(['/registrar']);
     this.navController.navigateRoot('registrar')

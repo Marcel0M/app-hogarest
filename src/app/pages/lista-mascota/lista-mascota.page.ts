@@ -19,7 +19,7 @@ export class ListaMascotaPage implements OnInit {
   color: any;
   temperamento: any;
   tamano: any;
-  foto_animal_rescatado: any;
+  //foto_animal_rescatado: any;
   hogar_temporal_id_hogar: any;
   animal_id_animal: any;
 
@@ -41,7 +41,6 @@ export class ListaMascotaPage implements OnInit {
       cssClass: 'my-custom-class',
       message: 'Cargando...',
       duration: 1500,
-      translucent: true,
       spinner: "bubbles"
     });
     await loading.present();

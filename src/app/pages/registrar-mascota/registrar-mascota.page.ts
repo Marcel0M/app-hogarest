@@ -90,7 +90,7 @@ export class RegistrarMascotaPage implements OnInit {
       //this.animal_id_animal = '';
       alert('MASCOTA REGISTRADA');
     },(error: any) => {
-      alert('ERROR');
+      //alert('ERROR');
       console.log("ERROR ===", error);
     })
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -8,7 +9,17 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./welcome.page.scss'],
 })
 export class WelcomePage implements OnInit {
-//SLIDE WELCOME PAGE
+
+
+  constructor(private router: Router, 
+              public navController: NavController) { }
+
+  ngOnInit() {
+  }
+
+
+
+  //FUNCION SLIDES WELCOME PAGE
   slides = [
     {
       img: 'assets/img/mascota.png',
@@ -24,14 +35,12 @@ export class WelcomePage implements OnInit {
     }
   ];
 
-  constructor(public navController: NavController) { }
 
-  ngOnInit() {
-  }
 
+  //FUNCIONES NAVEGACION
   comenzar() {
+    this.router.navigate(['/login']);
     this.navController.navigateRoot('login')
-
   }
 
 }

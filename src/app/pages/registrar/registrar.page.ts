@@ -35,7 +35,6 @@ ngOnInit() {
       cssClass: 'my-custom-class',
       message: 'Cargando...',
       duration: 1000,
-      translucent: true,
       spinner: "bubbles"
     });
     await loading.present();

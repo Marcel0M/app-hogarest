@@ -23,7 +23,6 @@ export class PerfilPage implements OnInit {
       cssClass: 'my-custom-class',
       message: 'Cargando...',
       duration: 1500,
-      translucent: true,
       spinner: "bubbles"
     });
     await loading.present();
